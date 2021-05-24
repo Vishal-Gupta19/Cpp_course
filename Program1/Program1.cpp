@@ -1,20 +1,46 @@
-// Program1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+Adding a class and member variables and functions
 
+All the class members are declared under public specifier and will be available to everyone
+*/
 #include <iostream>
 
+class Rectangle {
+public:
+    int length;
+    int breadth;
+
+    int area() {
+        return length * breadth;
+    }
+    int perimeter() {
+        return 2 * (length * breadth);
+    }
+};
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Rectangle!\n";
+    std::cout << "Creating an object of Rectangle Class!\n";
+    Rectangle r1;
+
+    r1.length = 10;
+    r1.breadth = 5;
+
+    std::cout << "Area of Rectangle: " << r1.area() << std::endl;
+    std::cout << "Perimeter of Rectangle: " << r1.perimeter() << std::endl;
+    std::cout << "Sizeof Rectangle object: " << sizeof(r1) << std::endl;
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+/*
+OUTPUT:
+-----------
+Rectangle!
+Creating an object of Rectangle Class!
+Area of Rectangle: 50
+Perimeter of Rectangle: 100
+Sizeof Rectangle object: 8
+
+*/
