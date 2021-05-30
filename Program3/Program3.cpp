@@ -38,12 +38,15 @@ private:
 
 public:
     // Default constructor
+    /*
     Rectangle() {
         length = 0;
         breadth = 0;
     }
+    */
     // Parameterized constructor
-    Rectangle(int l, int b) {
+    // When default argument values are given, in case of absence of argument it will set length and breadth to 0.
+    Rectangle(int l=0, int b=0) {
         setLength(l);
         setBreadth(b);
     }
