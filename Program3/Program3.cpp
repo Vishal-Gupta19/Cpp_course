@@ -63,7 +63,7 @@ public:
         length = l;
     }
     int getBreadth() {
-        return length;
+        return breadth;
     }
     void setBreadth(int b) {
         breadth = b;
